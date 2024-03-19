@@ -1,0 +1,83 @@
+<section class="container">
+    <div class="row fw-loginform-wrapper justify-content-center align-items-center" id="loginForm">
+      <div class="col-lg-6 fw-form-section">
+        {{ page_message }}
+        {% snippet login_error_messages %}
+        <div class="form">
+          <form novalidate="novalidate" class="new_user_session" id="new_user_session" action="/support/login" accept-charset="UTF-8" method="post">
+            <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="" />
+            <h1>Log in to support portal</h1>
+            <p>
+              Are you a new user? <b> <a href="/support/signup">Sign up with us</a></b>
+            </p>
+            <div class="form-group">
+              <label for="emailInput" class="form-label">
+                Your e-mail address
+                <span class="fw-asterisk">*</span>
+              </label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Your e-mail address" name="user_session[email]" required="" aria_describedby="emailInput" />
+              <div class="invalid-feedback emailInput"></div>
+            </div>
+            <div class="form-group">
+              <label for="passwordInput" class="form-label">
+                Password
+                <span class="fw-asterisk">*</span>
+              </label>
+              <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="user_session[password]" required="" aria_describedby="passwordInput" />
+              <div class="invalid-feedback passwordInput"></div>
+            </div>
+            <div class="form-check">
+              <input name="user_session[remember_me]" type="hidden" value="false" />
+              <input type="checkbox" class="form-check-input" id="rememberInput" name="user_session[remember_me]" value="1" checked="true" aria_describedby="rememberInput" />
+              <label for="rememberInput" class="form-check-label">
+                Remember me on this computer
+              </label>
+              <div class="invalid-feedback rememberInput"></div>
+            </div>
+            <button type="submit" class="btn fw-primary-button btn-block w-100 login-button" data-recaptcha-enterprise="">
+              Login
+            </button>
+          </form>
+          {% if portal.has_alternate_login %}
+            <div class="fw-or">
+              <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
+              <hr />
+            </div>
+            <div class="fw-social-media-login row">
+              <div class="col-md-8 mx-auto">            
+                {% snippet social_login %}
+              </div>
+            </div>
+          {% endif %}
+            <div class="text-center fw-forget-section"><a href="#" id="forgetPassLink">{{ 'portal_translations.login.forgot' | t }}</a></div>
+        </div>
+        {% snippet agent_login %}
+        {% snippet customer_login %}
+      </div>
+    </div>
+      <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
+      <div class="col-lg-6 fw-form-section">
+        <div class="form">
+          {% snippet forgot_password_form %}
+          {% if portal.has_alternate_login %}
+            <div class="fw-or">
+              <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
+              <hr />
+            </div>
+            <div class="fw-social-media-login row">
+              <div class="col-md-8 mx-auto">            
+                {% snippet social_login %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    var form = `{% snippet login_form %}`;
+    var loginvalue = jQuery(form).find('[name="authenticity_token"]').attr("value");
+    jQuery('.form input[name="authenticity_token"]').attr("value",loginvalue);
+    console.log(loginvalue);
+  </script>

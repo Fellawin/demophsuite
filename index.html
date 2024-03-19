@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="public/output.css"> -->
+  </head>
+  <body class="portal portal--light">
+    <div id="app">
+      <div class="bg-[url('https://i.imgur.com/A2x6AlE.png')] relative !bg-cover">
+        <header class="!bg-transparent border-0 container-fluid px-0 fw-nav-wrapper fixed-top !relative">
+          <section class="bg-light container-fluid">
+              <div class="container">
+                  <a id="" href="#fw-main-content" class="visually-hidden visually-hidden-focusable p-8 my-12 btn btn-outline-primary">Skip to main content</a>
+              </div>
+          </section>
+          <section class="container !max-w-full !p-[22px]">
+              <nav class="navbar navbar-expand-xl navbar-light py-0">
+                  <a class="navbar-brand d-flex align-items-center mr-6" href="/support/home">
+                      <img
+                          data-src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151031023887/logo/Y-0_OawrxxkM4I8KapIf-Au2SosR7P1mJg.jpg"
+                          loading="lazy"
+                          alt="Freshworks Logo"
+                          class="d-inline-block align-top me-4 fw-brand-logo ls-is-cached lazyloaded"
+                          src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151031023887/logo/Y-0_OawrxxkM4I8KapIf-Au2SosR7P1mJg.jpg"
+                      />
+                      <div class="fs-22 semi-bold fw-brand-name ms-4" title="Demo PH Suite">Demo PH Suite</div>
+                  </a>
+    
+                  <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="navbarContentToggler">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+    
+                  <div class="collapse navbar-collapse !visible !bg-transparent border-l-2 border-[#ffffff61] !h-[56px]" id="navbarContent">
+                      <ul class="navbar-nav mt-64 mt-xl-0 !pl-6">
+                          <li class="nav-item !h-fit first:!ml-0 !px-0 !mx-4">
+                              <a href="/support/home" class="nav-link !px-0 !text-sm !font-bold !text-[#fff] font-fmPoppins"> <span class="d-md-none icon-home"></span> Home </a>
+                          </li>
+    
+                          <li class="nav-item !h-fit first:!ml-0 !px-0 !mx-4">
+                              <a href="/support/solutions" class="nav-link !px-0 !text-sm !font-bold !text-[#fff] font-fmPoppins"> <span class="d-md-none icon-solutions"></span> Knowledge base </a>
+                          </li>
+    
+                          <li class="nav-item !h-fit first:!ml-0 !px-0 !mx-4">
+                              <a href="/support/tickets" class="nav-link !px-0 !text-sm !font-bold !text-[#fff] font-fmPoppins"> <span class="d-md-none icon-tickets"></span> Tickets </a>
+                          </li>
+    
+                          <!-- <li class="nav-item no-hover">
+                              <a id="" href="/support/tickets/new" class="btn fw-secondary-button">Submit a ticket</a>
+                          </li> -->
+                      </ul>
+                      <!-- <ul class="navbar-nav flex-row align-items-center ps-8 fw-nav-dropdown-wrapper">
+                          <li class="nav-item dropdown no-hover fw-user-avatar px-xl-8">
+                              <a class="nav-link dropdown-toggle fw-avatar" href="#" id="userDropdownMenu" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <div class="fw-avatar-text">C</div>
+                              </a>
+    
+                              <div class="dropdown-menu" aria-labelledby="userDropdownMenu">
+                                  <div class="dropdown-item fw-user-info">
+                                      <div class="fw-avatar d-inline-block me-8">
+                                          <div class="fw-avatar-text">C</div>
+                                      </div>
+                                      Carl Costiniano
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+    
+                                  <a id="" href="/" class="dropdown-item">Dashboard</a>
+    
+                                  <a id="" href="/support/profile/edit" class="dropdown-item">My profile</a>
+    
+                                  <a id="" href="/logout" class="dropdown-item">Sign out</a>
+                              </div>
+                          </li>
+    
+                          <li class="nav-item dropdown no-hover ms-auto"></li>
+                      </ul> -->
+                  </div>
+              </nav>
+          </section>
+          <div class="nav-overlay d-none"></div>
+        </header>
+        <main class="fw-main-wrapper !mt-0" id="fw-main-content">
+          <section class="max-w-[65.625vw] mx-auto">
+              <div class="fw-loginform-wrapper justify-content-center align-items-center !py-0" id="loginForm">
+                  <div class="fw-form-section">
+                      <div class="alert alert-with-close notice" id="noticeajax" style="display: none;"></div>
+    
+                      <div class="form !bg-transparent !px-0 !pt-[74px] !pb-[82px] !border-0">
+                          <form novalidate="novalidate" class="new_user_session max-w-[58%] w-full mr-auto" id="new_user_session" action="/support/login" accept-charset="UTF-8" method="post">
+                              <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="PW/x1J9nVJx6qGQQv07TG6BDHZlIgmlHxKS8WVvM/PmErplUj3WZqjUE9KabeWCTAaGItLZOrxF43dyPp/PDdg==" />
+                              <h1 class="!text-[44px] !tracking-[-1px] !text-[#fff] !font-bold font-fmMontserrat !mb-[68px] !mt-0">Welcome to our customer<br class="max-[990px]:hidden"> support portal.</h1>
+    
+                              <!-- <p>
+                                  Are you a new user? <b> <a href="/support/signup">Sign up with us</a></b>
+                              </p> -->
+    
+                              <div class="form-group">
+                                  <!-- <label for="emailInput" class="form-label">
+                                      Your e-mail address
+    
+                                      <span class="fw-asterisk">*</span>
+                                  </label> -->
+    
+                                  <input type="email" class="form-control !rounded-full max-w-[432px] w-full !leading-[30px] !font-fmPoppins !text-sm" id="emailInput" placeholder="Your e-mail address" name="user_session[email]" required="" aria_describedby="emailInput" />
+    
+                                  <div class="invalid-feedback emailInput"></div>
+                              </div>
+    
+                              <div class="form-group">
+                                  <!-- <label for="passwordInput" class="form-label">
+                                      Password
+    
+                                      <span class="fw-asterisk">*</span>
+                                  </label> -->
+    
+                                  <input type="password" class="form-control !rounded-full max-w-[432px] w-full !leading-[30px] !font-fmPoppins !text-sm" id="passwordInput" placeholder="Password" name="user_session[password]" required="" aria_describedby="passwordInput" />
+    
+                                  <div class="invalid-feedback passwordInput"></div>
+                              </div>
+    
+                              <div class="form-check">
+                                  <input name="user_session[remember_me]" type="hidden" value="false" />
+    
+                                  <input type="checkbox" class="form-check-input" id="rememberInput" name="user_session[remember_me]" value="1" checked="true" aria_describedby="rememberInput" />
+    
+                                  <label for="rememberInput" class="form-check-label">
+                                      Remember me on this computer
+                                  </label>
+    
+                                  <div class="invalid-feedback rememberInput"></div>
+                              </div>
+    
+                              <button type="submit" class="btn fw-primary-button btn-block w-100 login-button" data-recaptcha-enterprise="">
+                                  Login
+                              </button>
+                          </form>
+    
+                          <div class="fw-or">
+                              <div><span>...or login using</span></div>
+                              <hr />
+                          </div>
+                          <div class="fw-social-media-login row">
+                              <div class="col-md-8 mx-auto">
+                                  <a id="" href="/auth/google_login" class="fw-google-btn py-12 rounded">Continue with Google</a>
+                              </div>
+                          </div>
+    
+                          <div class="text-center fw-forget-section"><a href="#" id="forgetPassLink">Forgot your password?</a></div>
+                      </div>
+                      <p class="fs-20 semi-bold mt-16 text-center">
+                          Are you an agent?
+                          <a
+                              id=""
+                              href="https://demophsuite.myfreshworks.com/login?client_id=451979510707337272&amp;redirect_uri=https%3A%2F%2Fdemophsuite.freshdesk.com%2Ffreshid%2Fauthorize_callback%3Fhd%3Ddemophsuite.freshdesk.com"
+                              class="fw-twitter-btn py-12 rounded"
+                          >
+                              Login here
+                          </a>
+                      </p>
+                  </div>
+              </div>
+              <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
+                  <div class="col-lg-6 fw-form-section">
+                      <div class="form">
+                          <form novalidate="novalidate" id="password_reset" action="/password_resets" accept-charset="UTF-8" method="post">
+                              <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="4hTku/aBa1bC8yNuixeBz2KVM4XoCfff5fdbXOl56atb1Yw75pOmYI1fs9ivIDJHw3emqBbFMYlZjjuKFUbWJA==" />
+                              <h1>Forgot password</h1>
+                              <p>Give us your email address and instructions to reset your password will be emailed to you.</p>
+                              <div class="form-group">
+                                  <label for="email" class="form-label">
+                                      Your e-mail address
+    
+                                      <span class="fw-asterisk">*</span>
+                                  </label>
+    
+                                  <input type="email" class="form-control" id="email" placeholder="Your e-mail address" name="email" required="" />
+    
+                                  <div class="invalid-feedback email"></div>
+                              </div>
+    
+                              <button type="submit" class="btn fw-primary-button btn-block password-forgot-button">
+                                  Reset my password
+                              </button>
+                              <button type="button" class="btn fw-secondary-button btn-block" id="loginFormLink">
+                                  Cancel
+                              </button>
+                          </form>
+    
+                          <div class="fw-or">
+                              <div><span>...or login using</span></div>
+                              <hr />
+                          </div>
+                          <div class="fw-social-media-login row">
+                              <div class="col-md-8 mx-auto">
+                                  <a id="" href="/auth/google_login" class="fw-google-btn py-12 rounded">Continue with Google</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </main>
+      <footer class="container-fluid px-0">
+          <section class="fw-contact-info d-none">
+              <p class="fw-contacts"></p>
+          </section>
+          <section class="fw-credit">
+              <nav class="fw-laws">
+                  <span class="copyright-text">Helpdesk Software by</span>
+                  <a id="" href="https://www.freshworks.com/freshdesk/?utm_source=portal&amp;utm_medium=reflink&amp;utm_campaign=portal_reflink" class="fw-branding" target="_blank">Freshdesk</a>
+                  <a id="" href="" class="cookie-link" data-bs-toggle="modal" data-bs-target="#portal-cookie-info">Cookie policy</a>
+    
+                  <div class="modal fade" id="portal-cookie-info" tabindex="-1" role="dialog" aria-labelledby="portal-cookie-info" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h3 class="cookie-header">Why we love Cookies</h3>
+                                  <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <p>We use cookies to try and give you a better experience in Freshdesk.</p>
+                                  <p>
+                                      You can learn more about what kind of cookies we use, why, and how from our <a class="privacy-link" href="https://www.freshworks.com/privacy/" target="_blank">Privacy policy</a>. If you hate cookies, or are
+                                      just on a diet, you can disable them altogether too. Just note that the Freshdesk service is pretty big on some cookies (we love the choco-chip ones), and some portions of Freshdesk may not work properly if
+                                      you disable cookies.
+                                  </p>
+                                  <p>
+                                      We’ll also assume you agree to the way we use cookies and are ok with it as described in our <a class="privacy-link" href="https://www.freshworks.com/privacy/" target="_blank">Privacy policy</a>, unless you
+                                      choose to disable them altogether through your browser.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <a id="" href="https://www.freshworks.com/privacy" class="footer-link" target="_blank">Privacy Policy</a>
+              </nav>
+          </section>
+      </footer>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
