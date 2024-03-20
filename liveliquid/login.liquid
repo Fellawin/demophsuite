@@ -1,43 +1,70 @@
-<section class="container">
-    <div class="row fw-loginform-wrapper justify-content-center align-items-center" id="loginForm">
-      <div class="col-lg-6 fw-form-section">
-        {{ page_message }}
-        {% snippet login_error_messages %}
-        <div class="form">
-          <form novalidate="novalidate" class="new_user_session" id="new_user_session" action="/support/login" accept-charset="UTF-8" method="post">
-            <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="" />
-            <h1>Log in to support portal</h1>
-            <p>
-              Are you a new user? <b> <a href="/support/signup">Sign up with us</a></b>
-            </p>
-            <div class="form-group">
-              <label for="emailInput" class="form-label">
-                Your e-mail address
-                <span class="fw-asterisk">*</span>
-              </label>
-              <input type="email" class="form-control" id="emailInput" placeholder="Your e-mail address" name="user_session[email]" required="" aria_describedby="emailInput" />
-              <div class="invalid-feedback emailInput"></div>
-            </div>
-            <div class="form-group">
-              <label for="passwordInput" class="form-label">
-                Password
-                <span class="fw-asterisk">*</span>
-              </label>
-              <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="user_session[password]" required="" aria_describedby="passwordInput" />
-              <div class="invalid-feedback passwordInput"></div>
-            </div>
-            <div class="form-check">
-              <input name="user_session[remember_me]" type="hidden" value="false" />
-              <input type="checkbox" class="form-check-input" id="rememberInput" name="user_session[remember_me]" value="1" checked="true" aria_describedby="rememberInput" />
-              <label for="rememberInput" class="form-check-label">
-                Remember me on this computer
-              </label>
-              <div class="invalid-feedback rememberInput"></div>
-            </div>
-            <button type="submit" class="btn fw-primary-button btn-block w-100 login-button" data-recaptcha-enterprise="">
-              Login
-            </button>
-          </form>
+<section class="max-w-[65.625vw] mx-auto">
+  <div class="fw-loginform-wrapper justify-content-center align-items-center !py-0" id="loginForm">
+    <div class="fw-form-section">
+      {{ page_message }}
+
+      {% snippet login_error_messages %}
+      <div class="form !bg-transparent !px-0 !pt-[74px] !pb-[82px] !border-0">
+        <form novalidate="novalidate" class="new_user_session max-w-[58%] w-full mr-auto" id="new_user_session" action="/support/login" accept-charset="UTF-8" method="post">
+          <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="" />
+          <h1 class="!text-[44px] !tracking-[-1px] !text-[#fff] !font-bold font-fmMontserrat !mb-[68px] !mt-0">Welcome to our customer<br class="max-[990px]:hidden"> support portal.</h1>
+		  {% comment %}
+          <p>
+            Are you a new user? <b> <a href="/support/signup">Sign up with us</a></b>
+          </p>
+          {% endcomment %}
+          <div class="form-group last:mb-0">
+            {% comment %}
+            <label for="emailInput" class="form-label">
+              Your e-mail address
+              <span class="fw-asterisk">*</span>
+            </label>
+            {% endcomment %}
+            <input type="email" class="form-control placeholder:!text-[#000] !shadow-2xl !rounded-full max-w-[432px] w-full !leading-[30px] !font-fmPoppins !text-sm" id="emailInput" placeholder="Your e-mail address" name="user_session[email]" required="" aria_describedby="emailInput" />
+            <div class="invalid-feedback emailInput"></div>
+          </div>
+          <div class="form-group last:mb-0">
+            {% comment %}
+            <label for="passwordInput" class="form-label">
+              Password
+              <span class="fw-asterisk">*</span>
+            </label>
+            {% endcomment %}
+            <input type="password" class="form-control placeholder:!text-[#000] !shadow-2xl !rounded-full max-w-[432px] w-full !leading-[30px] !font-fmPoppins !text-sm" id="passwordInput" placeholder="Password" name="user_session[password]" required="" aria_describedby="passwordInput" />
+            <div class="invalid-feedback passwordInput"></div>
+          </div>
+          <div class="flex mt-[44.8px] mb-[105.6px] w-full max-w-[412px]">
+              <div class="flex flex-col">
+                  <div class="form-check !flex !mb-0 !pl-0 !min-h-[unset]">
+                      <input name="user_session[remember_me]" type="hidden" value="false" />
+
+                      <input type="checkbox" class="form-check-input !mt-0 !ml-0 w-4 h-4 mr-5" id="rememberInput" name="user_session[remember_me]" value="1" checked="true" aria_describedby="rememberInput" />
+
+                      <label for="rememberInput" class="form-check-label !text-[#fff] font-fmPoppins !font-normal text-xs">
+                          Remember me on this computer
+                      </label>
+                      <div class="invalid-feedback rememberInput"></div>
+                  </div>
+                  <div class="fw-forget-section mt-auto">
+                      <a href="#" id="forgetPassLink" class="!underline-offset-4 !text-[#fff] font-fmPoppins !font-normal text-xs !underline">Forgot your password?</a>
+                  </div>
+              </div>
+              <button type="submit" class="flex items-center btn fw-primary-button !rounded-md !font-bold !font-fmPoppins !text-sm !uppercase !flex !bg-transparent btn-block w-[112px] h-[50px] p-[12.8px] !border-2 !border-[#fff] !ml-auto login-button" data-recaptcha-enterprise="">
+                  <img src="https://i.imgur.com/VZwzwBX.png" class="w-[22px] h-[22px] mr-3" alt="">
+                  Login
+              </button>
+          </div>
+          <!-- Agent Login -->
+          <div class="flex max-w-[380.4px] w-full items-center whitespace-nowrap">
+              <img src="https://imgur.com/bjtMVr7.png" class="w-[52px] h-[52px] mr-4" alt="">
+              <div class="!text-[#fff] !font-fmPoppins !text-sm !font-medium mr-4">Are you an agent?</div>
+              <a id="custom_agent_btn" href="#" class="!flex rounded-md !uppercase !text-[#fff] !text-sm py-[8px] !px-[12px] !font-bold !font-fmMontserrat !bg-[#0f3861]">
+                  Login here 
+                  <img src="https://imgur.com/OXAf6De.png" class="!w-[18px] !h-[18px] !ml-4" alt="">
+              </a>
+          </div>
+        </form>
+        {% comment %}
           {% if portal.has_alternate_login %}
             <div class="fw-or">
               <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
@@ -49,35 +76,44 @@
               </div>
             </div>
           {% endif %}
-            <div class="text-center fw-forget-section"><a href="#" id="forgetPassLink">{{ 'portal_translations.login.forgot' | t }}</a></div>
-        </div>
-        {% snippet agent_login %}
-        {% snippet customer_login %}
+        
+          <div class="text-center fw-forget-section"><a href="#" id="forgetPassLink">{{ 'portal_translations.login.forgot' | t }}</a></div>
+          {% endcomment %}
+      </div>
+      {% comment %}
+      	{% snippet agent_login %}
+      {% endcomment %}
+      {% snippet customer_login %}
+    </div>
+  </div>
+    <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
+    <div class="col-lg-6 fw-form-section">
+      <div class="form">
+        {% snippet forgot_password_form %}
+        {% if portal.has_alternate_login %}
+          <div class="fw-or">
+            <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
+            <hr />
+          </div>
+          <div class="fw-social-media-login row">
+            <div class="col-md-8 mx-auto">            
+              {% snippet social_login %}
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
-      <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
-      <div class="col-lg-6 fw-form-section">
-        <div class="form">
-          {% snippet forgot_password_form %}
-          {% if portal.has_alternate_login %}
-            <div class="fw-or">
-              <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
-              <hr />
-            </div>
-            <div class="fw-social-media-login row">
-              <div class="col-md-8 mx-auto">            
-                {% snippet social_login %}
-              </div>
-            </div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    var form = `{% snippet login_form %}`;
-    var loginvalue = jQuery(form).find('[name="authenticity_token"]').attr("value");
-    jQuery('.form input[name="authenticity_token"]').attr("value",loginvalue);
-    console.log(loginvalue);
-  </script>
+  </div>
+</section>
+<div class="absolute !left-0 !top-[766px] !bg-[url('https://imgur.com/3JswMzN.png')] w-full h-[120px]">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var form = `{% snippet login_form %}`;
+  var loginvalue = jQuery(form).find('[name="authenticity_token"]').attr("value");
+  jQuery('.form input[name="authenticity_token"]').attr("value",loginvalue);
+  console.log(loginvalue);
+  var agentLogin = `{% snippet agent_login %}`;
+  var agentLoginLink = jQuery(agentLogin).find('a').attr("href");
+  console.log(agentLoginLink);
+</script>
