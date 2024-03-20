@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="public/output.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Fellawin/demophsuite/public/index-CJL-vP6m.css">
   </head>
   <body class="portal portal--light">
     <div id="app">
-      <div class="bg-[url('https://i.imgur.com/A2x6AlE.png')] relative !bg-contain">
+      <div class="bg-[url('https://i.imgur.com/A2x6AlE.png')] relative !bg-contain flex flex-col min-h-100vh">
         <header class="!bg-transparent border-0 container-fluid px-0 fw-nav-wrapper fixed-top !relative">
           <section class="bg-light container-fluid">
               <div class="container">
@@ -88,7 +88,7 @@
         </header>
         <main class="fw-main-wrapper !mt-0" id="fw-main-content">
           <section class="max-w-[65.625vw] mx-auto">
-              <div class="fw-loginform-wrapper justify-content-center align-items-center !py-0" id="loginForm">
+              <div class="fw-loginform-wrapper justify-content-center align-items-center !py-0 d-none" id="loginForm">
                   <div class="fw-form-section">
                       <div class="alert alert-with-close notice" id="noticeajax" style="display: none;"></div>
     
@@ -96,11 +96,6 @@
                           <form novalidate="novalidate" class="new_user_session max-w-[58%] w-full mr-auto" id="new_user_session" action="/support/login" accept-charset="UTF-8" method="post">
                               <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="PW/x1J9nVJx6qGQQv07TG6BDHZlIgmlHxKS8WVvM/PmErplUj3WZqjUE9KabeWCTAaGItLZOrxF43dyPp/PDdg==" />
                               <h1 class="!text-[44px] !tracking-[-1px] !text-[#fff] !font-bold font-fmMontserrat !mb-[68px] !mt-0">Welcome to our customer<br class="max-[990px]:hidden"> support portal.</h1>
-    
-                              <!-- <p>
-                                  Are you a new user? <b> <a href="/support/signup">Sign up with us</a></b>
-                              </p> -->
-    
                               <div class="form-group last:mb-0">
                                   <!-- <label for="emailInput" class="form-label">
                                       Your e-mail address
@@ -178,26 +173,26 @@
                       </p> -->
                   </div>
               </div>
-              <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
-                  <div class="col-lg-6 fw-form-section">
-                      <div class="form">
-                          <form novalidate="novalidate" id="password_reset" action="/password_resets" accept-charset="UTF-8" method="post">
+              <div class="fw-loginform-wrapper justify-content-center align-items-center !py-0" id="forgetPassForm">
+                  <div class="fw-form-section">
+                      <div class="form !bg-transparent !px-0 !pt-[74px] !pb-[82px] !border-0">
+                          <form novalidate="novalidate" class="max-w-[58%] w-full mr-auto" id="password_reset" action="/password_resets" accept-charset="UTF-8" method="post">
                               <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="4hTku/aBa1bC8yNuixeBz2KVM4XoCfff5fdbXOl56atb1Yw75pOmYI1fs9ivIDJHw3emqBbFMYlZjjuKFUbWJA==" />
-                              <h1>Forgot password</h1>
+                              <h1 class="!text-[44px] !tracking-[-1px] !text-[#fff] !font-bold font-fmMontserrat !mb-[68px] !mt-0">Welcome to our customer<br class="max-[990px]:hidden"> support portal.</h1>
                               <p>Give us your email address and instructions to reset your password will be emailed to you.</p>
                               <div class="form-group">
-                                  <label for="email" class="form-label">
+                                  <!-- <label for="email" class="form-label">
                                       Your e-mail address
     
                                       <span class="fw-asterisk">*</span>
-                                  </label>
+                                  </label> -->
     
-                                  <input type="email" class="form-control" id="email" placeholder="Your e-mail address" name="email" required="" />
+                                  <input type="email" class="form-control placeholder:!text-[#000] !shadow-2xl !rounded-full max-w-[432px] w-full !leading-[30px] !font-fmPoppins !text-sm" id="email" placeholder="Your e-mail address" name="email" required="" />
     
                                   <div class="invalid-feedback email"></div>
                               </div>
     
-                              <button type="submit" class="btn fw-primary-button btn-block password-forgot-button">
+                              <button type="submit" class="btn fw-primary-button btn-block password-forgot-button !flex rounded-md !uppercase !text-[#fff] !text-sm py-[8px] !px-[12px] !font-bold !font-fmMontserrat !bg-[#0f3861]">
                                   Reset my password
                               </button>
                               <button type="button" class="btn fw-secondary-button btn-block" id="loginFormLink">
@@ -205,7 +200,7 @@
                               </button>
                           </form>
     
-                          <div class="fw-or">
+                          <!-- <div class="fw-or">
                               <div><span>...or login using</span></div>
                               <hr />
                           </div>
@@ -213,54 +208,56 @@
                               <div class="col-md-8 mx-auto">
                                   <a id="" href="/auth/google_login" class="fw-google-btn py-12 rounded">Continue with Google</a>
                               </div>
-                          </div>
+                          </div> -->
                       </div>
                   </div>
               </div>
           </section>
-          <div class="absolute !left-0 !top-[766px] !bg-[url('https://imgur.com/3JswMzN.png')] w-full h-[120px]">
-            
-          </div>
+         
       </main>
-      <footer class="container-fluid py-0 !bg-[#0f3861] min-h-[100px] flex !px-[48px] z-[100] relative">
-          <section class="fw-contact-info d-none">
-              <p class="fw-contacts"></p>
-          </section>
-          <section class="fw-credit !bg-[#0f3861] w-full d-flex items-center">
-              <nav class="fw-laws">
-                  <!-- <span class="copyright-text">Helpdesk Software by</span> -->
-                  <a href="/support/home" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Home</a>
-                  <a href="/support/tickets" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Tickets</a>
-                  <a href="/support/solutions" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Solutions</a>
-                  <!-- <a id="" href="https://www.freshworks.com/freshdesk/?utm_source=portal&amp;utm_medium=reflink&amp;utm_campaign=portal_reflink" class="pr-[13px] !no-underline fw-branding !font-bold !font-fmPoppins !text-[#fff] !text-sm" target="_blank">Freshdesk</a>
-                  <a id="" href="" class="pr-[13px] !no-underline cookie-link !font-bold !text-[#fff] !font-fmPoppins !text-sm" data-bs-toggle="modal" data-bs-target="#portal-cookie-info">Cookie policy</a>
-    
-                  <div class="modal fade" id="portal-cookie-info" tabindex="-1" role="dialog" aria-labelledby="portal-cookie-info" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 class="cookie-header">Why we love Cookies</h3>
-                                  <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  <p>We use cookies to try and give you a better experience in Freshdesk.</p>
-                                  <p>
-                                      You can learn more about what kind of cookies we use, why, and how from our <a class="privacy-link" href="https://www.freshworks.com/privacy/" target="_blank">Privacy policy</a>. If you hate cookies, or are
-                                      just on a diet, you can disable them altogether too. Just note that the Freshdesk service is pretty big on some cookies (we love the choco-chip ones), and some portions of Freshdesk may not work properly if
-                                      you disable cookies.
-                                  </p>
-                                  <p>
-                                      We’ll also assume you agree to the way we use cookies and are ok with it as described in our <a class="privacy-link" href="https://www.freshworks.com/privacy/" target="_blank">Privacy policy</a>, unless you
-                                      choose to disable them altogether through your browser.
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <a id="" href="https://www.freshworks.com/privacy" class="footer-link pr-[13px] !no-underline !text-[#fff] !font-bold !font-fmPoppins !text-sm" target="_blank">Privacy Policy</a> -->
-              </nav>
-          </section>
-      </footer>
+      <div class="flex flex-col h-[134.4px]">
+        <div class="absolute !left-0 !top-0 !bg-[url('https://imgur.com/3JswMzN.png')] w-full h-[134.4px]">
+        </div>
+        <footer class="container-fluid py-0 !bg-[#0f3861] min-h-[100px] w-full flex !px-[48px] z-[100] relative mt-[33.6px]">
+            <section class="fw-contact-info d-none">
+                <p class="fw-contacts"></p>
+            </section>
+            <section class="fw-credit !bg-[#0f3861] w-full d-flex items-center">
+                <nav class="fw-laws">
+                    <!-- <span class="copyright-text">Helpdesk Software by</span> -->
+                    <a href="/support/home" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Home</a>
+                    <a href="/support/tickets" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Tickets</a>
+                    <a href="/support/solutions" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Solutions</a>
+                    <!-- <a id="" href="https://www.freshworks.com/freshdesk/?utm_source=portal&amp;utm_medium=reflink&amp;utm_campaign=portal_reflink" class="pr-[13px] !no-underline fw-branding !font-bold !font-fmPoppins !text-[#fff] !text-sm" target="_blank">Freshdesk</a>
+                    <a id="" href="" class="pr-[13px] !no-underline cookie-link !font-bold !text-[#fff] !font-fmPoppins !text-sm" data-bs-toggle="modal" data-bs-target="#portal-cookie-info">Cookie policy</a>
+        
+                    <div class="modal fade" id="portal-cookie-info" tabindex="-1" role="dialog" aria-labelledby="portal-cookie-info" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="cookie-header">Why we love Cookies</h3>
+                                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>We use cookies to try and give you a better experience in Freshdesk.</p>
+                                    <p>
+                                        You can learn more about what kind of cookies we use, why, and how from our <a class="privacy-link" href="https://www.freshworks.com/privacy/" target="_blank">Privacy policy</a>. If you hate cookies, or are
+                                        just on a diet, you can disable them altogether too. Just note that the Freshdesk service is pretty big on some cookies (we love the choco-chip ones), and some portions of Freshdesk may not work properly if
+                                        you disable cookies.
+                                    </p>
+                                    <p>
+                                        We’ll also assume you agree to the way we use cookies and are ok with it as described in our <a class="privacy-link" href="https://www.freshworks.com/privacy/" target="_blank">Privacy policy</a>, unless you
+                                        choose to disable them altogether through your browser.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="" href="https://www.freshworks.com/privacy" class="footer-link pr-[13px] !no-underline !text-[#fff] !font-bold !font-fmPoppins !text-sm" target="_blank">Privacy Policy</a> -->
+                </nav>
+            </section>
+        </footer>
+        </div>
       </div>
     </div>
     <script type="module" src="/main.js"></script>

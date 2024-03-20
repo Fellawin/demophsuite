@@ -1,0 +1,26 @@
+{% if  portal.current_page != "csat_survey" %}
+  <div class="flex flex-col h-[134.4px]">
+    <div class="absolute !left-0 !top-0 !bg-[url('https://imgur.com/3JswMzN.png')] w-full h-[134.4px]">
+    </div>
+    <footer class="container-fluid py-0 !bg-[#0f3861] min-h-[100px] w-full flex !px-[48px] z-[100] relative mt-[33.6px]">
+      <section class="fw-contact-info">
+        <p class="fw-contacts">
+          {{ portal | footer_contact_info }}
+        </p>
+      </section>
+      <section class="fw-credit !bg-[#0f3861] w-full d-flex items-center">
+        <nav class="fw-laws">
+            <a href="/support/home" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Home</a>
+            <a href="/support/tickets" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Tickets</a>
+            <a href="/support/solutions" class="pr-[13px] !no-underline !font-bold !font-fmPoppins !text-[#fff] !text-sm">Solutions</a>
+            {% comment %}
+           {{ portal | footer_copyright }}
+           {{ portal | footer_cookie_law }}
+           {{ portal | footer_privacy_law }}
+           {{ portal | default_cookie_policy_settings }}
+            {% endcomment %}
+        </nav>
+      </section>
+    </footer>
+  </div>
+   {% endif %}

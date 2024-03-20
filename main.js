@@ -1,4 +1,4 @@
-import './dist/assets/index-CGBjB4Sv.css'
+import './dist/assets/index-CJL-vP6m.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'

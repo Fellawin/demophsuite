@@ -63,9 +63,33 @@
         {% snippet customer_login %}
       </div>
     </div>
-      <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
-      <div class="col-lg-6 fw-form-section">
-        <div class="form">
+    <div class="fw-loginform-wrapper justify-content-center align-items-center !py-0 d-none" id="forgetPassForm">
+      <div class="fw-form-section">
+        <div class="form !bg-transparent !px-0 !pt-[74px] !pb-[82px] !border-0">
+            <form novalidate="novalidate" class="max-w-[58%] w-full mr-auto" id="password_reset" action="/password_resets" accept-charset="UTF-8" method="post">
+                <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="" />
+                <h1 class="!text-[44px] !tracking-[-1px] !text-[#fff] !font-bold font-fmMontserrat !mb-[68px] !mt-0">Welcome to our customer<br class="max-[990px]:hidden"> support portal.</h1>
+                <p>Give us your email address and instructions to reset your password will be emailed to you.</p>
+                <div class="form-group">
+                    <!-- <label for="email" class="form-label">
+                        Your e-mail address
+
+                        <span class="fw-asterisk">*</span>
+                    </label> -->
+
+                    <input type="email" class="form-control placeholder:!text-[#000] !shadow-2xl !rounded-full max-w-[432px] w-full !leading-[30px] !font-fmPoppins !text-sm" id="email" placeholder="Your e-mail address" name="email" required="" />
+
+                    <div class="invalid-feedback email"></div>
+                </div>
+
+                <button type="submit" class="btn fw-primary-button btn-block password-forgot-button !flex rounded-md !uppercase !text-[#fff] !text-sm py-[8px] !px-[12px] !font-bold !font-fmMontserrat !bg-[#0f3861]">
+                    Reset my password
+                </button>
+                <button type="button" class="btn fw-secondary-button btn-block" id="loginFormLink">
+                    Cancel
+                </button>
+            </form>
+        {% comment %}
           {% snippet forgot_password_form %}
           {% if portal.has_alternate_login %}
             <div class="fw-or">
@@ -78,6 +102,8 @@
               </div>
             </div>
           {% endif %}
+        {% endcomment %}
+
         </div>
       </div>
     </div>
@@ -87,8 +113,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     var form = `{% snippet login_form %}`;
+    var forgotform = `{% snippet forgot_password_form %}`;
     var loginvalue = jQuery(form).find('[name="authenticity_token"]').attr("value");
-    jQuery('.form input[name="authenticity_token"]').attr("value",loginvalue);
+    var forgotpassvalue = jQuery(forgotform).find('[name="authenticity_token"]').attr("value");
+    jQuery('#loginForm input[name="authenticity_token"]').attr("value",loginvalue);
+    jQuery('#forgetPassForm input[name="authenticity_token"]').attr("value",forgotpassvalue);
     console.log(loginvalue);
     var agentLogin = `{% snippet agent_login %}`;
     var agentLoginLink = jQuery(agentLogin).find('a').attr("href");
