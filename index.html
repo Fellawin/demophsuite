@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Fellawin/demophsuite/public/index-CJL-vP6m.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Fellawin/demophsuite/public/index-CJL-vP6m.css"> -->
+    <link rel="stylesheet" href="./public/output.css">
   </head>
   <body class="portal portal--light">
     <div id="app">
-      <div class="bg-[url('https://i.imgur.com/A2x6AlE.png')] relative !bg-contain flex flex-col min-h-100vh">
+      <div class="bg-[url('https://i.imgur.com/A2x6AlE.png')] relative !bg-cover flex flex-col min-h-100vh">
         <header class="!bg-transparent border-0 container-fluid px-0 fw-nav-wrapper fixed-top !relative">
           <section class="bg-light container-fluid">
               <div class="container">
@@ -179,7 +180,7 @@
                           <form novalidate="novalidate" class="max-w-[58%] w-full mr-auto" id="password_reset" action="/password_resets" accept-charset="UTF-8" method="post">
                               <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="4hTku/aBa1bC8yNuixeBz2KVM4XoCfff5fdbXOl56atb1Yw75pOmYI1fs9ivIDJHw3emqBbFMYlZjjuKFUbWJA==" />
                               <h1 class="!text-[44px] !tracking-[-1px] !text-[#fff] !font-bold font-fmMontserrat !mb-[68px] !mt-0">Welcome to our customer<br class="max-[990px]:hidden"> support portal.</h1>
-                              <p>Give us your email address and instructions to reset your password will be emailed to you.</p>
+                              <p class="text-white">Give us your email address and instructions to reset your password will be emailed to you.</p>
                               <div class="form-group">
                                   <!-- <label for="email" class="form-label">
                                       Your e-mail address
@@ -191,13 +192,14 @@
     
                                   <div class="invalid-feedback email"></div>
                               </div>
-    
-                              <button type="submit" class="btn fw-primary-button btn-block password-forgot-button !flex rounded-md !uppercase !text-[#fff] !text-sm py-[8px] !px-[12px] !font-bold !font-fmMontserrat !bg-[#0f3861]">
-                                  Reset my password
-                              </button>
-                              <button type="button" class="btn fw-secondary-button btn-block" id="loginFormLink">
-                                  Cancel
-                              </button>
+                              <div class="flex">
+                                <button type="submit" class="btn !rounded-full mr-3 fw-primary-button btn-block password-forgot-button !flex rounded-md !uppercase !text-[#fff] !text-sm py-[8px] !px-[24px] !font-bold !font-fmMontserrat !bg-[#0f3861]">
+                                    Reset my password
+                                </button>
+                                <button type="button" class="btn !rounded-full !py-[8px] !px-[24px] fw-secondary-button btn-block" id="loginFormLink">
+                                    Cancel
+                                </button>
+                            </div>
                           </form>
     
                           <!-- <div class="fw-or">
@@ -215,7 +217,7 @@
           </section>
          
       </main>
-      <div class="flex flex-col h-[134.4px]">
+      <div class="flex flex-col h-[134.4px] relative">
         <div class="absolute !left-0 !top-0 !bg-[url('https://imgur.com/3JswMzN.png')] w-full h-[134.4px]">
         </div>
         <footer class="container-fluid py-0 !bg-[#0f3861] min-h-[100px] w-full flex !px-[48px] z-[100] relative mt-[33.6px]">

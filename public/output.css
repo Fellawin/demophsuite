@@ -655,28 +655,16 @@ video {
   inset: -0.25rem;
 }
 
-.end-1{
-  inset-inline-end: 0.25rem;
-}
-
-.left-0{
-  left: 0px;
-}
-
-.top-\[734px\]{
-  top: 734px;
-}
-
 .\!left-0{
   left: 0px !important;
 }
 
-.\!top-\[734px\]{
-  top: 734px !important;
+.\!top-0{
+  top: 0px !important;
 }
 
-.\!top-\[766px\]{
-  top: 766px !important;
+.end-1{
+  inset-inline-end: 0.25rem;
 }
 
 .isolate{
@@ -826,6 +814,10 @@ video {
   margin-top: 16rem;
 }
 
+.mt-\[33\.6px\]{
+  margin-top: 33.6px;
+}
+
 .mt-\[44\.8px\]{
   margin-top: 44.8px;
 }
@@ -954,6 +946,10 @@ video {
   height: 1rem;
 }
 
+.h-\[134\.4px\]{
+  height: 134.4px;
+}
+
 .h-\[22px\]{
   height: 22px;
 }
@@ -964,14 +960,6 @@ video {
 
 .h-\[52px\]{
   height: 52px;
-}
-
-.h-\[42px\]{
-  height: 42px;
-}
-
-.h-\[120px\]{
-  height: 120px;
 }
 
 .\!min-h-\[unset\]{
@@ -1022,8 +1010,8 @@ video {
   max-width: 100% !important;
 }
 
-.max-w-\[340\.4px\]{
-  max-width: 340.4px;
+.max-w-\[380\.4px\]{
+  max-width: 380.4px;
 }
 
 .max-w-\[412px\]{
@@ -1040,10 +1028,6 @@ video {
 
 .max-w-\[65\.625vw\]{
   max-width: 65.625vw;
-}
-
-.max-w-\[380\.4px\]{
-  max-width: 380.4px;
 }
 
 .flex-shrink{
@@ -1880,6 +1864,10 @@ video {
   border-radius: 9999px !important;
 }
 
+.\!rounded-md{
+  border-radius: 0.375rem !important;
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -1888,8 +1876,8 @@ video {
   border-radius: 0.375rem;
 }
 
-.\!rounded-md{
-  border-radius: 0.375rem !important;
+.rounded-full{
+  border-radius: 9999px;
 }
 
 .rounded-b{
@@ -2055,24 +2043,12 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'https\:\/\/i\.imgur\.com\/A2x6AlE\.png\'\)\]{
-  background-image: url('https://i.imgur.com/A2x6AlE.png');
-}
-
-.bg-\[url\(\'https\:\/\/i\.imgur\.com\/fUbNPdk\.png\'\)\]{
-  background-image: url('https://i.imgur.com/fUbNPdk.png');
-}
-
-.bg-\[url\(\'https\:\/\/imgur\.com\/2BD4EQq\.png\'\)\]{
-  background-image: url('https://imgur.com/2BD4EQq.png');
-}
-
-.bg-\[url\(\'https\:\/\/imgur\.com\/3JswMzN\.png\'\)\]{
-  background-image: url('https://imgur.com/3JswMzN.png');
-}
-
 .\!bg-\[url\(\'https\:\/\/imgur\.com\/3JswMzN\.png\'\)\]{
   background-image: url('https://imgur.com/3JswMzN.png') !important;
+}
+
+.bg-\[url\(\'https\:\/\/i\.imgur\.com\/A2x6AlE\.png\'\)\]{
+  background-image: url('https://i.imgur.com/A2x6AlE.png');
 }
 
 .decoration-slice{
@@ -2095,12 +2071,12 @@ video {
           box-decoration-break: clone;
 }
 
-.\!bg-cover{
-  background-size: cover !important;
-}
-
 .\!bg-contain{
   background-size: contain !important;
+}
+
+.\!bg-cover{
+  background-size: cover !important;
 }
 
 .bg-fixed{
@@ -2245,6 +2221,46 @@ video {
   padding-bottom: 8px;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.\!px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.\!py-2{
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.\!px-6{
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.\!px-\[24px\]{
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.\!py-\[8px\]{
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.\!px-10{
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
 .\!pb-\[82px\]{
   padding-bottom: 82px !important;
 }
@@ -2341,8 +2357,8 @@ video {
   font-family: "Poppins", sans-serif;
 }
 
-.\!text-\[10px\]{
-  font-size: 10px !important;
+.\!text-\[24px\]{
+  font-size: 24px !important;
 }
 
 .\!text-\[44px\]{
@@ -2357,10 +2373,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.\!text-\[24px\]{
-  font-size: 24px !important;
 }
 
 .\!font-bold{
@@ -2459,14 +2471,6 @@ video {
   letter-spacing: -1px !important;
 }
 
-.tracking-\[-1px\]{
-  letter-spacing: -1px;
-}
-
-.tracking-\[-1\.5px\]{
-  letter-spacing: -1.5px;
-}
-
 .\!text-\[\#fff\]{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
@@ -2476,14 +2480,19 @@ video {
   color: rgb(51 102 153 / .35);
 }
 
+.text-\[\#d0d0f8\]{
+  --tw-text-opacity: 1;
+  color: rgb(208 208 248 / var(--tw-text-opacity));
+}
+
 .text-blue-500{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
-.text-\[\#d0d0f8\]{
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(208 208 248 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .\!underline{
